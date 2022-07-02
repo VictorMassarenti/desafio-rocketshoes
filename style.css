@@ -1,0 +1,174 @@
+:root {
+    --button: #FF0000;
+    --main-background:  #C4C4C4;
+    --background: #E5E5E5;
+    --text: #000;
+    --footer: #000;
+    --text-description: #9C9696;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+    "nav nav" 
+    "aside main"
+    "footer footer";
+
+}
+
+nav {
+    grid-area: nav;
+
+    display: flex;
+
+    background-color: transparent;
+    position: fixed;
+
+    width: 100%;
+
+    padding: 1%;
+}
+
+    .logo {
+        margin: 1% 0 0 5%;
+    }
+
+    .nlist {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        margin: 0 5% 0 10%;
+    }
+
+    .nlist li {
+        margin: 0 15% 0 10%;
+        
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+
+    .sch {
+        display: flex;
+        align-items: center;
+
+        margin: 0 6% 0 20%;
+        padding: .5rem;
+
+        width: 20%;
+        height: 3rem;
+        background-color: var(--background);   
+    }
+
+    #sch {
+        margin: 0 0 0 .5rem;
+
+        border: none;
+        background-color: var(--background);
+    }
+
+aside {
+    grid-area: aside;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 15rem 5rem 5rem 5rem;
+
+    background-color: var(--background);
+}
+
+    .title {
+        font-weight: 700;
+        font-size: 3.75rem;
+
+        text-transform: capitalize;
+    }
+
+    .subtitle {
+        font-weight: 700;
+        font-size: 1rem;
+
+        color: var(--text-description);
+    }
+
+    .price {
+        font-weight: 700;
+        font-size: 2.5rem;
+
+        color: #000;
+    }
+
+    .buy {
+        width: 17rem;
+        height: 5.6rem;
+        
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+
+        border: none;
+        background-color: var(--button);
+        color: var(--background);
+
+    }
+
+main {
+    grid-area: main;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 70vw;
+    height: 80vh;
+    padding: 15rem 0 0 0;
+
+    background-color: var(--main-background);
+}
+
+.photoa {
+    display: flex;
+    justify-content: space-around;
+
+    width: 60vw;
+}
+
+#bd {
+    border-bottom: 4px solid var(--button);
+}
+
+footer {
+    grid-area: footer;
+
+    display: flex;
+    height: auto;
+
+    background-color: var(--background);
+}
+
+.flist {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.flist li {
+    margin: 0 30px 0 30px;
+    
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+}
+
+.exp {
+    background-color: #000;
+}
